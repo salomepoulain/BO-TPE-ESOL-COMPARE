@@ -1,0 +1,63 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Project data & results — large, regenerable, never commit
+data/
+output/
+output_test/
+logs/
+slurm-*.out
+
+# Storage byproducts (in case any leak outside output/)
+*.sqlite
+*.sqlite-journal
+
+# Model checkpoints
+*.pt
+*.pth
+*.ckpt
+
+# Snellius / makery archives
+makery-archives/
+
+# CLAUDE.md
+
+# # --- MAKERY ---
+# .makery/
+# .before/
+# .after/
+# settings.local.json
+# .claude
+# .claude-free
+# CLAUDE.md.bak.*
+# CLAUDE.md
+
+uv.lock
+
+output/simulation
+
+data/
+
+__LOCAL__
