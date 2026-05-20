@@ -1,0 +1,47 @@
+[project]
+name = "ml4chem"
+version = "0.1.0"
+description = "Machine Learning for Chemistry"
+requires-python = ">=3.11"
+dependencies = [
+    "torch",
+    "torchvision",
+    "torchaudio",
+    "torch-geometric",
+    "jupyterlab",
+    "numpy",
+    "scipy",
+    "matplotlib",
+    "seaborn",
+    "pydantic",
+    "ipywidgets",
+    "notebook",
+    "rdkit",
+    "torch-scatter",
+    "botorch>=0.17.2",
+    "gpytorch>=1.15.2",
+    "rich>=15.0.0",
+    "optuna>=4.8.0",
+    "cmaes>=0.13.0",
+    "anthropic>=0.102.0",
+    "plotly>=6.7.0",
+    "kaleido>=1.3.0",
+]
+
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.uv.sources]
+torch-scatter = [
+    { url = "https://data.pyg.org/whl/torch-2.11.0%2Bcu130/torch_scatter-2.1.2%2Bpt211cu130-cp313-cp313-linux_x86_64.whl", marker = "sys_platform == 'linux' and platform_machine == 'x86_64' and python_version == '3.13'" },
+]
+
+# [tool.uv.extra-build-dependencies]
+# torch-scatter = ["torch"]

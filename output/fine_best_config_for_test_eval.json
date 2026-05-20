@@ -1,0 +1,21 @@
+{
+  "pass_label": "fine",
+  "method": "BO",
+  "run": "bayes_a7",
+  "run_path": "output/simulation/fine_bo/bayes_a7",
+  "seed": 76,
+  "trial": 133,
+  "validation_loss": 0.36702761054039,
+  "elapsed_seconds": 26.31131797103444,
+  "search_epochs": 2000,
+  "num_layers": 5,
+  "hidden_dim": 128,
+  "layer_type": "GATED",
+  "activation": "TANH",
+  "pooling": "MEAN",
+  "optimizer_type": "ADAM",
+  "learning_rate": 0.0009649616428939,
+  "weight_decay": 1e-05,
+  "batch_size": 16,
+  "dropout": 0.0142829584459822
+}

@@ -1,0 +1,13 @@
+{
+  "_comment": "Deployment recommendation from fine_pass_discussion.md §15. Marginal-best region: GATED + MEAN + hidden_dim=64 (the median-best capacity, NOT BO winner's 128) + num_layers=4 (TPE's modal winner) + RELU (most common in top-N trials at the higher N thresholds) + dropout=0.1 (conservative midpoint of the flat [0, 0.25] band) + batch_size=16 + LR=1e-3 + Adam + weight_decay=1e-5. To be evaluated head-to-head against the BO winner on the SAME 5 split seeds (split_seed_start=1001) so the comparison is paired.",
+  "layer_type": "GATED",
+  "pooling": "MEAN",
+  "activation": "RELU",
+  "num_layers": 4,
+  "hidden_dim": 64,
+  "batch_size": 16,
+  "learning_rate": 0.001,
+  "dropout": 0.1,
+  "optimizer_type": "ADAM",
+  "weight_decay": 1e-05
+}
