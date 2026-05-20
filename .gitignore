@@ -56,7 +56,7 @@ makery-archives/
 
 uv.lock
 
-output/simulation
+output/simulation/
 
 data/
 

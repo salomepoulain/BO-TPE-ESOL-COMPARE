@@ -250,10 +250,23 @@ Typical output folders:
 
 ## Troubleshooting
 
+- **Jupyter Notebooks Not Working:** Ensure the virtual environment is activated before launching Jupyter:
+  ```bash
+  source .venv/bin/activate
+  jupyter lab
+  ```
+  Or run via `uv`:
+  ```bash
+  uv run jupyter lab
+  ```
+  If Jupyter is not found, reinstall dependencies: `uv sync`.
+
+- **Notebooks Not Finding Modules:** Jupyter must run inside the activated virtual environment. If notebooks can't import project modules, restart the kernel and check that the notebook is using the correct Python interpreter (should point to `.venv/bin/python`).
+
 - **VS Code Path Resolution:** This project is optimized for development in Visual Studio Code. To ensure that relative imports and data paths resolve correctly, you must open the `machine_learning_for_chemistry/` directory as your primary workspace root. Ensure your `.vscode/settings.json` is configured to use the project's virtual environment.
 - **`python` works but scripts fail with missing modules:** Prefer `uv run python ...` so dependency resolution matches `pyproject.toml`.
 - **Missing Plotly Images:** If the analysis notebooks fail to export plots, ensure that Chrome is installed. You may also need to run `.venv/bin/kaleido_get_chrome` to ensure the headless browser is correctly configured.
-- **ModuleNotFoundError:** Ensure the virtual environment is activated and the project was installed using `pip install -e .`.
+- **ModuleNotFoundError:** Ensure the virtual environment is activated and the project was installed using `uv sync`.
 - **HPC/SLURM Issues:** If running on Snellius, ensure your account has the necessary quotas and that the `conda` or `venv` environments are correctly loaded in your SLURM submission scripts.
 
 ---
